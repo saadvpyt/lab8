@@ -45,7 +45,8 @@ public class SalesItemTest
     public void testAddComment()
     {
         SalesItem salesIte1 = new SalesItem("Brain surgery for Dummies", 21998);
-        assertEquals(true, salesIte1.addComment("James Duckling", "This book is great. I perform brain surgery every week now.", 4));
+        assertEquals(true, salesIte1.addComment("James Duckling", "This book is great. I perform brain surgery every week now.", 5));
+        assertEquals(false, salesIte1.addComment("James Duckling", "my glorious king lebron james", 3));
         assertEquals(1, salesIte1.getNumberOfComments());
     }
 
@@ -76,7 +77,15 @@ public class SalesItemTest
         SalesItem salesIte1 = new SalesItem("Brain Surgery for Dummies.", 9899);
         assertEquals(true, salesIte1.addComment("Fred", "Great - I perform brain surgery every week now!", 4));
     }
+    
+    
+
+    @Test
+    public void negativeTest()
+    {
+    }
 }
+
 
 
 
